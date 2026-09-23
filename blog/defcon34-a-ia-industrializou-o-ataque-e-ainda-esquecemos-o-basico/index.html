@@ -1,0 +1,517 @@
+<!doctype html><html lang=en class=no-js>
+<head>
+<script src=/js/critical.bundle.25e465d95df88cc3e1eeed34003ded1e83a243e90d722e8cad076d8ff05a3727.js integrity="sha256-JeRl2V34jMPh7u00AD3tHoOiQ+kNci6MrQdtj/BaNyc=" crossorigin=anonymous></script><meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no">
+<meta name=generator content="Hugo 0.164.0">
+<meta name=theme content="Hinode 3.24.0">
+<link rel=stylesheet href="/css/main.min.34f0d48c55e390b608647a94377477fa787a0f36a58b0f7ceceac62db9dd408b.css" integrity="sha256-NPDUjFXjkLYIZHqUN3R3+nh6Dzaliw987OrGLbndQIs=" crossorigin=anonymous>
+<link rel=preload href=/fonts/inter-v12-latin-regular.woff2 as=font type=font/woff2 crossorigin>
+<meta name=robots content="index, follow">
+<meta name=googlebot content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<meta name=bingbot content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<title>DEFCON 34: a IA industrializou o ataque. E ainda esquecemos o básico. - debugging the life </title>
+<meta name=description content="Os agentes de IA dominaram a DEF CON 34. Mas quase todo ataque de palco caiu sobre um fundamento que já era nossa responsabilidade muito antes deles e...">
+<link rel=canonical href=https://tiagotavares.io/blog/defcon34-a-ia-industrializou-o-ataque-e-ainda-esquecemos-o-basico/>
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="DEFCON 34: a IA industrializou o ataque. E ainda esquecemos o básico.">
+<meta property="og:description" content="Os agentes de IA dominaram a DEF CON 34. Mas quase todo ataque de palco caiu sobre um fundamento que já era nossa responsabilidade muito antes deles e...">
+<meta property="og:url" content="https://tiagotavares.io/blog/defcon34-a-ia-industrializou-o-ataque-e-ainda-esquecemos-o-basico/">
+<meta property="og:site_name" content="debugging the life">
+<meta property="article:published_time" content="2026-09-23T00:00:00+00:00">
+<meta property="article:modified_time" content="2026-09-23T00:00:00+00:00">
+<meta property="og:image" content="https://res.cloudinary.com/dtr6hzxnx/image/upload/c_fill,h_640,w_1280/v1790164249/Defcon_34_-_tiagotavares.io_m0yd3o.png">
+<meta property="og:image:alt" content="DEFCON 34: a IA industrializou o ataque. E ainda esquecemos o básico.">
+<meta name=twitter:card content="summary_large_image">
+<meta name=twitter:title content="DEFCON 34: a IA industrializou o ataque. E ainda esquecemos o básico.">
+<meta name=twitter:description content="Os agentes de IA dominaram a DEF CON 34. Mas quase todo ataque de palco caiu sobre um fundamento que já era nossa responsabilidade muito antes deles e...">
+<meta name=twitter:image content="https://res.cloudinary.com/dtr6hzxnx/image/upload/c_fill,h_640,w_1280/v1790164249/Defcon_34_-_tiagotavares.io_m0yd3o.png">
+<meta name=twitter:image:alt content="DEFCON 34: a IA industrializou o ataque. E ainda esquecemos o básico.">
+<script type=application/ld+json>{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://tiagotavares.io/#/schema/organization/1","name":"Tiago Tavares","url":"https://tiagotavares.io/","sameAs":["https://x.com/tiagotavi/","https://www.linkedin.com/in/tiagotavi/","https://github.com/0xtiago/"],"logo":{"@type":"ImageObject","@id":"https://tiagotavares.io/#/schema/image/1","url":"https://tiagotavares.io/img/logo500x500-tt.png","width":500,"height":500,"caption":"Tiago Tavares"},"image":{"@id":"https://tiagotavares.io/#/schema/image/1"}},{"@type":"WebSite","@id":"https://tiagotavares.io/#/schema/website/1","url":"https://tiagotavares.io/","name":"debugging the life","description":"Technical content, most about information security, offensive security and application security.","publisher":{"@id":"https://tiagotavares.io/#/schema/organization/1"}},{"@type":"WebPage","@id":"https://tiagotavares.io/blog/defcon34-a-ia-industrializou-o-ataque-e-ainda-esquecemos-o-basico/","url":"https://tiagotavares.io/blog/defcon34-a-ia-industrializou-o-ataque-e-ainda-esquecemos-o-basico/","name":"DEFCON 34: a IA industrializou o ataque. E ainda esquecemos o básico.","description":"Os agentes de IA dominaram a DEF CON 34. Mas quase todo ataque de palco caiu sobre um fundamento que já era nossa responsabilidade muito antes deles existirem.","isPartOf":{"@id":"https://tiagotavares.io/#/schema/website/1"},"about":{"@id":"https://tiagotavares.io/#/schema/organization/1"},"datePublished":"2026-09-23T00:00:00CET","dateModified":"2026-09-23T00:00:00CET","breadcrumb":{"@id":"https://tiagotavares.io/blog/defcon34-a-ia-industrializou-o-ataque-e-ainda-esquecemos-o-basico/#/schema/breadcrumb/1"},"primaryImageOfPage":{"@id":"https://tiagotavares.io/blog/defcon34-a-ia-industrializou-o-ataque-e-ainda-esquecemos-o-basico/#/schema/image/2"},"inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https://tiagotavares.io/blog/defcon34-a-ia-industrializou-o-ataque-e-ainda-esquecemos-o-basico/"]}]},{"@type":"BreadcrumbList","@id":"https://tiagotavares.io/blog/defcon34-a-ia-industrializou-o-ataque-e-ainda-esquecemos-o-basico/#/schema/breadcrumb/1","name":"Breadcrumbs","itemListElement":[{"@type":"ListItem","position":1,"item":{"@type":"WebPage","@id":"https://tiagotavares.io/","url":"https://tiagotavares.io/","name":"Home"}},{"@type":"ListItem","position":2,"item":{"@type":"WebPage","@id":"https://tiagotavares.io/blog/","url":"https://tiagotavares.io/blog/","name":"Blogs"}},{"@type":"ListItem","position":3,"item":{"@type":"WebPage","@id":"https://tiagotavares.io/blog/defcon34-a-ia-industrializou-o-ataque-e-ainda-esquecemos-o-basico/","url":"https://tiagotavares.io/blog/defcon34-a-ia-industrializou-o-ataque-e-ainda-esquecemos-o-basico/","name":"DEFCON 34: a IA industrializou o ataque. E ainda esquecemos o básico."}}]},{"@context":"https://schema.org","@graph":[{"@type":"Article","@id":"https://tiagotavares.io/#/schema/article/1","headline":"DEFCON 34: a IA industrializou o ataque. E ainda esquecemos o básico.","description":"Os agentes de IA dominaram a DEF CON 34. Mas quase todo ataque de palco caiu sobre um fundamento que já era nossa responsabilidade muito antes deles existirem.","isPartOf":{"@id":"https://tiagotavares.io/blog/defcon34-a-ia-industrializou-o-ataque-e-ainda-esquecemos-o-basico/"},"mainEntityOfPage":{"@id":"https://tiagotavares.io/blog/defcon34-a-ia-industrializou-o-ataque-e-ainda-esquecemos-o-basico/"},"datePublished":"2026-09-23T00:00:00CET","dateModified":"2026-09-23T00:00:00CET","author":{"@id":"https://tiagotavares.io/#/schema/person/2"},"publisher":{"@id":"https://tiagotavares.io/#/schema/organization/1"},"image":{"@id":"https://tiagotavares.io/blog/defcon34-a-ia-industrializou-o-ataque-e-ainda-esquecemos-o-basico/#/schema/image/2"}}]},{"@context":"https://schema.org","@graph":[{"@type":"Person","@id":"https://tiagotavares.io/#/schema/person/2","name":"Tiago Tavares","sameAs":["https://x.com/tiagotavi/","https://www.linkedin.com/in/tiagotavi/","https://github.com/0xtiago/"]}]},{"@context":"https://schema.org","@graph":[{"@type":"ImageObject","@id":"https://tiagotavares.io/blog/defcon34-a-ia-industrializou-o-ataque-e-ainda-esquecemos-o-basico/#/schema/image/2","url":"https://res.cloudinary.com/dtr6hzxnx/image/upload/c_fill,h_640,w_1280/v1790164249/Defcon_34_-_tiagotavares.io_m0yd3o.png","contentUrl":"https://res.cloudinary.com/dtr6hzxnx/image/upload/c_fill,h_640,w_1280/v1790164249/Defcon_34_-_tiagotavares.io_m0yd3o.png","caption":"DEFCON 34: a IA industrializou o ataque. E ainda esquecemos o básico."}]}]}</script>
+<link rel=icon type=image/png sizes=16x16 href=/img/favicon_hu_1439d38440a5839e.png>
+<link rel=icon type=image/png sizes=32x32 href=/img/favicon_hu_2677d7aa6d6e5a6c.png>
+<link rel=icon type=image/png sizes=48x48 href=/img/favicon_hu_24de4ef6669294b7.png>
+<link rel=apple-touch-icon sizes=180x180 href=/img/favicon_hu_b562fdb53b6b071b.png>
+</head><body class=navbar-fixed>
+<div class="container-fluid fixed-top p-0">
+<nav class="navbar px-4 py-4 navbar-fs-6 navbar-md-fs
+bg-body navbar-fixed-top navbar-expand-md">
+<div class="container-xxl p-0">
+<div class="d-flex navbar-container">
+<div class="d-flex align-items-center">
+<button class="navbar-toggler collapsed p-0 mx-auto invisible fw-30" type=button>
+<svg class="svg-inline--fa fas fa-ellipsis fa-fw" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 448 512" overflow="visible"><use href="#fas-ellipsis"/></svg></button></div>
+<div class="w-100 d-flex align-items-center w-md-auto">
+<a class="navbar-brand mx-auto" href=/ aria-label=Home>
+<svg class="m-auto" width="30" height="30" xmlns:xlink="http://www.w3.org/1999/xlink" zoomAndPan="magnify" viewBox="0 0 375 374.999991" version="1.0"><defs><g/></defs><g fill="#745bf5" fill-opacity="1"><g transform="translate(7.055573, 336.386155)"><g><path d="M177.953125-245.140625 169.5-194.078125H123.21875l-19.796875 118.75c-1.59375 9.367187-.507812999999999 15.699219 3.265625 19 3.78125 3.292969 9.078125 4.9375 15.890625 4.9375 3.1875.0 6.425781-.289062999999999 9.71875-.875C135.597656-52.847656 138.101562-53.300781 139.8125-53.625l2.546875 50.59375C138.535156-1.863281 133.429688-.5625 127.046875.875c-6.386719 1.4375-13.996094 2.265625-22.828125 2.484375-25 .945313-43.996094-4.453125-56.984375-16.203125C34.253906-24.601562 29.894531-42.453125 34.15625-66.390625l21.0625-127.6875H21.703125l8.625-51.0625H63.6875L73.421875-303.875H141.40625l-9.734375 58.734375zm0 0"/></g></g></g><g fill="#745bf5" fill-opacity="1"><g transform="translate(193.341776, 336.386155)"><g><path d="M177.953125-245.140625 169.5-194.078125H123.21875l-19.796875 118.75c-1.59375 9.367187-.507812999999999 15.699219 3.265625 19 3.78125 3.292969 9.078125 4.9375 15.890625 4.9375 3.1875.0 6.425781-.289062999999999 9.71875-.875C135.597656-52.847656 138.101562-53.300781 139.8125-53.625l2.546875 50.59375C138.535156-1.863281 133.429688-.5625 127.046875.875c-6.386719 1.4375-13.996094 2.265625-22.828125 2.484375-25 .945313-43.996094-4.453125-56.984375-16.203125C34.253906-24.601562 29.894531-42.453125 34.15625-66.390625l21.0625-127.6875H21.703125l8.625-51.0625H63.6875L73.421875-303.875H141.40625l-9.734375 58.734375zm0 0"/></g></g></g></svg></a>
+</div>
+<div class="d-flex align-items-center">
+<button class="navbar-toggler main-nav-toggler collapsed p-0" type=button data-bs-toggle=collapse data-bs-target=#navbar-0-collapse aria-controls=navbar-0 aria-expanded=false aria-label="Toggle main navigation">
+<span class="toggler-icon top-bar emphasis"></span>
+<span class="toggler-icon middle-bar emphasis"></span>
+<span class="toggler-icon bottom-bar emphasis"></span>
+</button>
+</div>
+</div>
+<div class="navbar-collapse collapse" id=navbar-0-collapse>
+<div class="d-flex flex-fill ms-md-3 mt-4 mt-md-0 me-md-3">
+<form class="search flex-fill position-relative me-auto">
+<input class="search-input form-control is-search" type=search placeholder="Search this site" aria-label="Search this site" autocomplete=off name=search-input>
+<div class="search-suggestions shadow bg-body rounded d-none" data-no-results="No results for"></div>
+</form>
+</div>
+<ul class="navbar-nav navbar-nav-scroll ms-auto">
+<li class=nav-item>
+<a class=nav-link data-nav=main data-nav-main=about href=/about/><span class=d-md-none>About</span>
+<span class="d-none d-md-block">About</span>
+</a>
+</li>
+<li class=nav-item>
+<a class="nav-link active" data-nav=main data-nav-main=blog href=/blog/><span class="active d-md-none">Blog</span>
+<span class="active d-none d-md-block">Blog</span>
+</a>
+</li>
+<li class=nav-item>
+<a class=nav-link data-nav=main data-nav-main=tags href=/tags/><span class=d-md-none>Tags</span>
+<span class="d-none d-md-block">Tags</span>
+</a>
+</li>
+<li class="nav-link navbar-fs-6 navbar-md-fs d-flex mode-switch align-items-center" id=navbar-mode>
+<input type=checkbox class="checkbox navbar-mode-selector" id=navbar-mode-checkbox aria-label="Toggle theme">
+<label class=label for=navbar-mode-checkbox>
+<svg class="svg-inline--fa fas fa-sun fa-fw" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512" overflow="visible"><use href="#fas-sun"/></svg>
+<svg class="svg-inline--fa fas fa-moon fa-fw" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512" overflow="visible"><use href="#fas-moon"/></svg>
+<div class=ball></div>
+</label>
+</li>
+</ul>
+</div>
+</div>
+</nav>
+</div>
+<main id=container class=main>
+<div class="container-xxl flex-fill py-4 px-4 px-xxl-0">
+<div class="row row-cols-1 row-cols-md-2 row-cols-lg-3">
+<div class="col col-lg-2 d-none d-lg-block sidebar-overflow sticky-top p-0">
+</div>
+<div class="col-12 col-md-9 col-lg-8 mb-5">
+<header>
+<nav aria-label=breadcrumb class=d-sm-none>
+<ol class=breadcrumb>
+<li class=breadcrumb-item>
+<a href=/blog/>
+<svg class="svg-inline--fa fas fa-angle-left" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 256 512" overflow="visible"><use href="#fas-angle-left"/></svg>&nbsp;&nbsp;Blogs
+</a>
+</li></ol>
+</nav>
+<nav aria-label=breadcrumb class="d-none d-sm-block">
+<ol class=breadcrumb>
+<li class=breadcrumb-item><a href=/>Home</a></li>
+<li class=breadcrumb-item><a href=/blog/>Blogs</a></li><li class="breadcrumb-item active" aria-current=page>
+DEFCON 34: a IA industrializou o ataque. E ainda esquecemos o básico.
+</li>
+</ol>
+</nav>
+<h1 id=defcon-34-a-ia-industrializou-o-ataque-e-ainda-esquecemos-o-básico class="display-4 pt-1">DEFCON 34: a IA industrializou o ataque. E ainda esquecemos o básico.</h1>
+<small class="text-body-secondary text-uppercase">
+Posted on September 23, 2026
+&bull;
+10&nbsp;min read
+&bull;
+1,946&nbsp;words
+</small>
+<div class=mt-3>
+<div class=d-none-dark>
+<div class="hstack gap-1">
+<a href=/tags/ai/ class="btn btn-light btn-sm position-relative" role=button>
+<span class="d-flex justify-content-start">
+<span class=my-auto>AI</span>
+</span></a>&nbsp;
+<a href=/tags/ai-security/ class="btn btn-light btn-sm position-relative" role=button>
+<span class="d-flex justify-content-start">
+<span class=my-auto>AI Security</span>
+</span></a>&nbsp;
+<a href=/tags/offensive-security/ class="btn btn-light btn-sm position-relative" role=button>
+<span class="d-flex justify-content-start">
+<span class=my-auto>Offensive Security</span>
+</span></a>&nbsp;
+<a href=/tags/security-operations/ class="btn btn-light btn-sm position-relative" role=button>
+<span class="d-flex justify-content-start">
+<span class=my-auto>Security Operations</span>
+</span></a>&nbsp;
+<a href=/tags/application-security/ class="btn btn-light btn-sm position-relative" role=button>
+<span class="d-flex justify-content-start">
+<span class=my-auto>Application Security</span>
+</span></a>&nbsp;
+<a href=/tags/defcon/ class="btn btn-light btn-sm position-relative" role=button>
+<span class="d-flex justify-content-start">
+<span class=my-auto>Defcon</span>
+</span></a>&nbsp;
+<a href=/tags/conferences/ class="btn btn-light btn-sm position-relative" role=button>
+<span class="d-flex justify-content-start">
+<span class=my-auto>Conferences</span>
+</span></a>&nbsp;
+</div>
+</div>
+<div class=d-none-light>
+<div class="hstack gap-1">
+<a href=/tags/ai/ class="btn btn-outline-primary btn-sm position-relative" role=button>
+<span class="d-flex justify-content-start">
+<span class=my-auto>AI</span>
+</span></a>&nbsp;
+<a href=/tags/ai-security/ class="btn btn-outline-primary btn-sm position-relative" role=button>
+<span class="d-flex justify-content-start">
+<span class=my-auto>AI Security</span>
+</span></a>&nbsp;
+<a href=/tags/offensive-security/ class="btn btn-outline-primary btn-sm position-relative" role=button>
+<span class="d-flex justify-content-start">
+<span class=my-auto>Offensive Security</span>
+</span></a>&nbsp;
+<a href=/tags/security-operations/ class="btn btn-outline-primary btn-sm position-relative" role=button>
+<span class="d-flex justify-content-start">
+<span class=my-auto>Security Operations</span>
+</span></a>&nbsp;
+<a href=/tags/application-security/ class="btn btn-outline-primary btn-sm position-relative" role=button>
+<span class="d-flex justify-content-start">
+<span class=my-auto>Application Security</span>
+</span></a>&nbsp;
+<a href=/tags/defcon/ class="btn btn-outline-primary btn-sm position-relative" role=button>
+<span class="d-flex justify-content-start">
+<span class=my-auto>Defcon</span>
+</span></a>&nbsp;
+<a href=/tags/conferences/ class="btn btn-outline-primary btn-sm position-relative" role=button>
+<span class="d-flex justify-content-start">
+<span class=my-auto>Conferences</span>
+</span></a>&nbsp;
+</div>
+</div>
+</div>
+<div class="py-3 d-flex align-items-center">
+<span class="hstack gap-2 text-body-secondary">
+<a aria-label="Share via LinkedIn" href="https://www.linkedin.com/sharing/share-offsite/?url=https://tiagotavares.io/blog/defcon34-a-ia-industrializou-o-ataque-e-ainda-esquecemos-o-basico/" class="btn btn-primary position-relative btn-social p-0" role=button>
+<span class="d-flex justify-content-start">
+<span class=my-auto></span>
+<span class=align-self-center>
+<svg class="svg-inline--fa fab fa-linkedin fa-fw" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 448 512" overflow="visible"><use href="#fab-linkedin"/></svg>
+</span>
+</span></a>
+<a aria-label="Share via Twitter" href="https://twitter.com/home?status=https://tiagotavares.io/blog/defcon34-a-ia-industrializou-o-ataque-e-ainda-esquecemos-o-basico/" class="btn btn-primary position-relative btn-social p-0" role=button>
+<span class="d-flex justify-content-start">
+<span class=my-auto></span>
+<span class=align-self-center>
+<svg class="svg-inline--fa fab fa-x-twitter fa-fw" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 448 512" overflow="visible"><use href="#fab-x-twitter"/></svg>
+</span>
+</span></a>
+<a aria-label="Share via Facebook" href="https://www.facebook.com/sharer.php?u=https://tiagotavares.io/blog/defcon34-a-ia-industrializou-o-ataque-e-ainda-esquecemos-o-basico/" class="btn btn-primary position-relative btn-social p-0" role=button>
+<span class="d-flex justify-content-start">
+<span class=my-auto></span>
+<span class=align-self-center>
+<svg class="svg-inline--fa fab fa-facebook fa-fw" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512" overflow="visible"><use href="#fab-facebook"/></svg>
+</span>
+</span></a>
+<a aria-label="Share via WhatsApp" href="whatsapp://send?text=DEFCON+34%3A+a+IA+industrializou+o+ataque.+E+ainda+esquecemos+o+b%C3%A1sico.%20https://tiagotavares.io/blog/defcon34-a-ia-industrializou-o-ataque-e-ainda-esquecemos-o-basico/" class="btn btn-primary position-relative btn-social p-0" role=button>
+<span class="d-flex justify-content-start">
+<span class=my-auto></span>
+<span class=align-self-center>
+<svg class="svg-inline--fa fab fa-whatsapp fa-fw" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 448 512" overflow="visible"><use href="#fab-whatsapp"/></svg>
+</span>
+</span></a>
+<div id=toast-message-email-4 class=toast role=alert aria-live=assertive aria-atomic=true>
+<div class=toast-header>
+<strong class=me-auto>debugging the life</strong>
+<button type=button class=btn-close data-bs-dismiss=toast aria-label=Close></button>
+</div>
+<div class=toast-body>Link copied to clipboard</div>
+</div>
+<a aria-label="Share via email" data-toast-target=toast-message-email-4 data-clipboard=https://tiagotavares.io/blog/defcon34-a-ia-industrializou-o-ataque-e-ainda-esquecemos-o-basico/ class="btn btn-primary position-relative btn-social p-0" role=button>
+<span class="d-flex justify-content-start">
+<span class=my-auto></span>
+<span class=align-self-center>
+<svg class="svg-inline--fa fas fa-link fa-fw" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512" overflow="visible"><use href="#fas-link"/></svg>
+</span>
+</span></a>
+<a aria-label="Share via system" class="btn btn-primary position-relative btn-social p-0" data-sharing-description="Os agentes de IA dominaram a DEF CON 34. Mas quase todo ataque de palco caiu sobre um fundamento que já era nossa responsabilidade muito antes deles existirem." data-sharing-title="DEFCON 34: a IA industrializou o ataque. E ainda esquecemos o básico." data-sharing-url=https://tiagotavares.io/blog/defcon34-a-ia-industrializou-o-ataque-e-ainda-esquecemos-o-basico/ role=button>
+<span class="d-flex justify-content-start">
+<span class=my-auto></span>
+<span class=align-self-center>
+<svg class="svg-inline--fa fas fa-share-nodes fa-fw" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512" overflow="visible"><use href="#fas-share-nodes"/></svg>
+</span>
+</span></a>
+</span></div>
+<div class="lead text-muted py-4">Os agentes de IA dominaram a DEF CON 34. Mas quase todo ataque de palco caiu sobre um fundamento que já era nossa responsabilidade muito antes deles existirem.</div>
+</header>
+<div class="d-md-none pb-5">
+<div class="d-grid gap-2 mx-auto">
+<a href=#toc-collapse class="btn btn-outline-secondary position-relative toc-button" data-bs-toggle=collapse aria-expanded=false aria-controls=toc-collapse role=button>
+<span class="d-flex justify-content-between">
+<span class=my-auto>On this page</span>
+<span class="align-self-center ps-1">
+<svg class="svg-inline--fa fas fa-sort" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 384 512" overflow="visible"><use href="#fas-sort"/></svg>
+</span>
+</span></a>
+</div>
+<div class="collapse border bg-body-tertiary rounded p-1 navbar-nav-scroll" id=toc-collapse>
+<small>
+<div class="toc toc-panel text-body p-2">
+<a class="toc-item toc-level-1" href=/blog/defcon34-a-ia-industrializou-o-ataque-e-ainda-esquecemos-o-basico/#a-ia-não-inventou-vetor-novo-ela-industrializou-os-antigos>A IA não inventou vetor novo. Ela industrializou os antigos.</a>
+<a class="toc-item toc-level-1" href=/blog/defcon34-a-ia-industrializou-o-ataque-e-ainda-esquecemos-o-basico/#o-sandbox-é-uma-sugestão>O sandbox é uma sugestão</a>
+<a class="toc-item toc-level-1" href=/blog/defcon34-a-ia-industrializou-o-ataque-e-ainda-esquecemos-o-basico/#nenhuma-credencial-roubada>Nenhuma credencial roubada</a>
+<a class="toc-item toc-level-1" href=/blog/defcon34-a-ia-industrializou-o-ataque-e-ainda-esquecemos-o-basico/#às-vezes-a-porta-de-entrada-é-uma-credencial-que-você-esqueceu-exposta>Às vezes a porta de entrada é uma credencial que você esqueceu exposta</a>
+<a class="toc-item toc-level-1" href=/blog/defcon34-a-ia-industrializou-o-ataque-e-ainda-esquecemos-o-basico/#e-no-varejo-o-mesmo-roteiro-agora-com-agentes>E no varejo? O mesmo roteiro, agora com agentes</a>
+<a class="toc-item toc-level-1" href=/blog/defcon34-a-ia-industrializou-o-ataque-e-ainda-esquecemos-o-basico/#a-ia-como-amplificador-não-como-mágica>A IA como amplificador, não como mágica</a>
+<a class="toc-item toc-level-1" href=/blog/defcon34-a-ia-industrializou-o-ataque-e-ainda-esquecemos-o-basico/#nem-tudo-deveria-precisar-virar-um-controle-de-ia>Nem tudo deveria precisar virar um &ldquo;controle de IA&rdquo;</a>
+<a class="toc-item toc-level-1" href=/blog/defcon34-a-ia-industrializou-o-ataque-e-ainda-esquecemos-o-basico/#mais-blá-blá-blá>Mais blá blá blá</a>
+<a class="toc-item toc-level-1" href=/blog/defcon34-a-ia-industrializou-o-ataque-e-ainda-esquecemos-o-basico/#referências>Referências 📚</a>
+<a class="toc-item toc-level-2" href=/blog/defcon34-a-ia-industrializou-o-ataque-e-ainda-esquecemos-o-basico/#outras-publicações-deste-blog>Outras publicações deste blog</a>
+</div>
+</small>
+</div>
+</div>
+<div class="img-wrap mb-5"><img class="img-fluid rounded" src=https://res.cloudinary.com/dtr6hzxnx/image/upload/c_fill,h_1200,w_2800/v1790164249/Defcon_34_-_tiagotavares.io_m0yd3o.png fetchpriority=high srcset="https://res.cloudinary.com/dtr6hzxnx/image/upload/c_fill,h_247,w_576/v1790164249/Defcon_34_-_tiagotavares.io_m0yd3o.webp 576w, https://res.cloudinary.com/dtr6hzxnx/image/upload/c_fill,h_329,w_768/v1790164249/Defcon_34_-_tiagotavares.io_m0yd3o.webp 768w, https://res.cloudinary.com/dtr6hzxnx/image/upload/c_fill,h_425,w_992/v1790164249/Defcon_34_-_tiagotavares.io_m0yd3o.webp 992w, https://res.cloudinary.com/dtr6hzxnx/image/upload/c_fill,h_514,w_1200/v1790164249/Defcon_34_-_tiagotavares.io_m0yd3o.webp 1200w, https://res.cloudinary.com/dtr6hzxnx/image/upload/c_fill,h_600,w_1400/v1790164249/Defcon_34_-_tiagotavares.io_m0yd3o.webp 1400w, https://res.cloudinary.com/dtr6hzxnx/image/upload/c_fill,h_1200,w_2800/v1790164249/Defcon_34_-_tiagotavares.io_m0yd3o.webp 2800w" sizes=100vw height=1200 width=2800 alt="DEFCON 34: a IA industrializou o ataque. E ainda esquecemos o básico."></div><ul>
+<li>
+<a href=#a-ia-n%c3%a3o-inventou-vetor-novo-ela-industrializou-os-antigos>A IA não inventou vetor novo. Ela industrializou os antigos.</a>
+</li>
+<li>
+<a href=#o-sandbox-%c3%a9-uma-sugest%c3%a3o>O sandbox é uma sugestão</a>
+</li>
+<li>
+<a href=#nenhuma-credencial-roubada>Nenhuma credencial roubada</a>
+</li>
+<li>
+<a href=#%c3%a0s-vezes-a-porta-de-entrada-%c3%a9-uma-credencial-que-voc%c3%aa-esqueceu-exposta>Às vezes a porta de entrada é uma credencial que você esqueceu exposta</a>
+</li>
+<li>
+<a href=#e-no-varejo-o-mesmo-roteiro-agora-com-agentes>E no varejo? O mesmo roteiro, agora com agentes</a>
+</li>
+<li>
+<a href=#a-ia-como-amplificador-n%c3%a3o-como-m%c3%a1gica>A IA como amplificador, não como mágica</a>
+</li>
+<li>
+<a href=#nem-tudo-deveria-precisar-virar-um-controle-de-ia>Nem tudo deveria precisar virar um “controle de IA”</a>
+</li>
+<li>
+<a href=#mais-bl%c3%a1-bl%c3%a1-bl%c3%a1>Mais blá blá blá</a>
+</li>
+<li>
+<a href=#refer%c3%aancias->Referências 📚</a>
+<ul>
+<li>
+<a href=#outras-publica%c3%a7%c3%b5es-deste-blog>Outras publicações deste blog</a>
+</li>
+</ul>
+</li>
+</ul>
+<p>Há poucas semanas escrevi aqui sobre
+<a href=/blog/patchphobia-em-2026/>Patchphobia</a>
+, tentando entender por que ainda precisamos convencer profissionais de tecnologia de que a tecnologia pela qual são responsáveis precisa ser mantida. Estive em Las Vegas este ano, e confesso que abri a agenda da DEF CON 34 esperando um assunto completamente diferente. Este era o ano da IA. Agentes autônomos competindo em CTF, ferramentas que caçam vulnerabilidades sozinhas, o discurso de que o atacante agora é uma máquina que não dorme.</p>
+<p>E os agentes realmente dominaram o evento. Mas acompanhando e vendo o que sobrou depois dos holofotes (os slides, os whitepapers, os advisories, os relatos que aguentam ser lidos com calma), encontrei algo desconfortavelmente familiar. <strong>Quase nenhum daqueles ataques brilhantes de IA começou num vetor novo. Eles começaram num fundamento que já era nossa responsabilidade muito antes de os agentes existirem.</strong></p>
+<h2 id=a-ia-não-inventou-vetor-novo-ela-industrializou-os-antigos class=heading>A IA não inventou vetor novo. Ela industrializou os antigos.<a href=#a-ia-n%c3%a3o-inventou-vetor-novo-ela-industrializou-os-antigos aria-labelledby=a-ia-não-inventou-vetor-novo-ela-industrializou-os-antigos>
+<svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512" overflow="visible"><use href="#fas-link"/></svg>&nbsp;
+</a>
+</h2>
+<p>Essa é, para mim, a leitura mais honesta da DEF CON 34. A superfície de ataque não mudou de natureza; ela mudou de escala e de velocidade. Credencial exposta continua sendo credencial exposta. Papel de execução com privilégio demais continua sendo privilégio demais. Cadastro sem proteção continua sendo cadastro sem proteção. O que a IA fez foi pegar esses velhos pecados e transformá-los em algo que roda em minutos, em paralelo, sem cansar.</p>
+<p>Isso importa porque muda o lugar onde vale colocar esforço. Se o problema fosse uma classe inteiramente nova de vulnerabilidade, faria sentido correr atrás de uma defesa inteiramente nova. Mas se a IA está apenas apertando as brechas que já deixamos abertas, então o investimento certo não é o produto mais reluzente da feira. É fechar o básico com disciplina, pois agora o básico é atacado em escala industrial.</p>
+<h2 id=o-sandbox-é-uma-sugestão class=heading>O sandbox é uma sugestão<a href=#o-sandbox-%c3%a9-uma-sugest%c3%a3o aria-labelledby=o-sandbox-é-uma-sugestão>
+<svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512" overflow="visible"><use href="#fas-link"/></svg>&nbsp;
+</a>
+</h2>
+<p>O exemplo que melhor resume o ano veio das pesquisas sobre o runtime dos próprios agentes. Não estive na BlackHat este ano, mas uma coisa e certa, a semana em Las Vegas começou com uma parede de produtos corporativos prometendo proteger IA e terminou com pesquisadores desmontando, um a um, os ambientes que deveriam isolar esses agentes. A conclusão incômoda que ficou registrada na cobertura do evento é que boa parte dessas falhas <strong>não são bugs a serem corrigidos, e sim características da arquitetura agêntica atual</strong>, lacunas de projeto, não deslizes de implementação.</p>
+<p>Numa das apresentações, mostrou-se que os sandboxes de agentes de código amplamente usados podem ser tratados mais como recomendação do que como fronteira, incluindo uma falha de execução remota de código pré-tarefa avaliada com a nota máxima de severidade. Pare um segundo nessa ideia: o ambiente cuja única função é conter o agente foi contornado antes mesmo de o agente começar a trabalhar.</p>
+<p>E aqui está o ponto que conversa direto com o meu incômodo de sempre. Havia, na mesma semana, uma fila de ferramentas comerciais se propondo a resolver &ldquo;segurança de IA&rdquo;. Só que <strong>um problema de arquitetura não se resolve com uma licença</strong>. Comprar não é o mesmo que fazer. Se a fronteira de isolamento não existe de verdade, nenhum painel bonito por cima dela vai criá-la.</p>
+<h2 id=nenhuma-credencial-roubada class=heading>Nenhuma credencial roubada<a href=#nenhuma-credencial-roubada aria-labelledby=nenhuma-credencial-roubada>
+<svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512" overflow="visible"><use href="#fas-link"/></svg>&nbsp;
+</a>
+</h2>
+<p>Se o parágrafo anterior soou abstrato, a trilha de Cloud da conferência trouxe a versão concreta. Encadeando referências como o OWASP Top 10 for Agentic Applications e o MITRE ATLAS, uma das apresentações caminhou por uma cadeia de ataque completa contra um agente rodando em nuvem: uma injeção indireta de prompt contamina o contexto do agente, o agente abusa de uma função com um papel de execução privilegiado demais, esse acesso é usado para modificar a própria política de IAM e, ao final, um backdoor persistente é criado.</p>
+<p>O detalhe que eu peço para você guardar é este: <strong>tudo isso sem uma única credencial roubada.</strong> Não houve phishing, não houve senha vazada, não houve exploit de kernel. Houve um agente com mais permissão do que precisava, num ambiente onde ninguém tinha revisado o que aquele papel realmente podia fazer.</p>
+<p>E qual foi o conjunto de defesas recomendado? IAM de menor privilégio com escopo por agente, atenção às limitações reais das guardrails do provedor e arquitetura com humano no laço para ações de alto impacto. Ou seja: menor privilégio, conhecer os limites das ferramentas que você comprou, e não deixar a máquina decidir sozinha o que é irreversível. Nada disso é novo. É o feijão com arroz de sempre, aplicado a um ativo novo.</p>
+<h2 id=às-vezes-a-porta-de-entrada-é-uma-credencial-que-você-esqueceu-exposta class=heading>Às vezes a porta de entrada é uma credencial que você esqueceu exposta<a href=#%c3%a0s-vezes-a-porta-de-entrada-%c3%a9-uma-credencial-que-voc%c3%aa-esqueceu-exposta aria-labelledby=às-vezes-a-porta-de-entrada-é-uma-credencial-que-você-esqueceu-exposta>
+<svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512" overflow="visible"><use href="#fas-link"/></svg>&nbsp;
+</a>
+</h2>
+<p>Teve ainda um caso que parece feito sob medida para ilustrar o argumento. Pesquisadores mostraram como uma credencial de uma plataforma de rastreamento de erros, deixada publicamente exposta, combinada com uma integração de agente, podia ser encadeada até execução remota de código. Uma chave que não deveria estar visível, um agente conectado a ferramentas demais, e o resultado é o tipo de comprometimento que costumávamos associar a exploits sofisticados.</p>
+<p>A parte que mais me faz pensar é que o fabricante, segundo o relato, resolveu não tratar a causa raiz. E aqui aparece de novo a mesma escolha de sempre: alguém decidiu que aquilo era exceção aceitável, não problema a ser corrigido. <strong>De novo, a exceção virando processo.</strong> A credencial exposta é um pecado antigo, de higiene básica. O que mudou foi o raio de explosão quando um agente com acesso amplo passa a existir do outro lado dela.</p>
+<h2 id=e-no-varejo-o-mesmo-roteiro-agora-com-agentes class=heading>E no varejo? O mesmo roteiro, agora com agentes<a href=#e-no-varejo-o-mesmo-roteiro-agora-com-agentes aria-labelledby=e-no-varejo-o-mesmo-roteiro-agora-com-agentes>
+<svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512" overflow="visible"><use href="#fas-link"/></svg>&nbsp;
+</a>
+</h2>
+<p>Como boa parte da minha vida profissional acontece perto de varejo e e-commerce, essa foi a palestra que mais me interessou. O pesquisador apresentou uma década de guerra contra bots de compra a partir da cadeira do atacante, e o roteiro é quase entediante de tão conhecido: um exército de contas montado semanas antes com cadastro falso e credential stuffing, alvos escolhidos pela margem de revenda, APIs de pré-lançamento vazando produtos antes de o SKU existir, um vigia monitorando o estoque até a hora da abertura, e agentes de carrinho competindo pelo checkout com maior probabilidade de aprovação.</p>
+<p>O gancho novo é que esse mesmo modus operandi agora pode ser decomposto em agentes de IA, numa velocidade que antes seria considerada impossível. Mas repare: <strong>cada peça desse ataque é um fundamento que já tínhamos que defender.</strong> Credential stuffing tem folha de referência da OWASP há anos. Criação de contas falsas e scalping estão catalogados no OWASP Automated Threats desde sempre. A automação ficou mais esperta; a defesa continua sendo a mesma que adiamos por não ser glamourosa: MFA onde dói, detecção de abuso já no cadastro (e não só no checkout), limitação por comportamento e não só por IP.</p>
+<h2 id=a-ia-como-amplificador-não-como-mágica class=heading>A IA como amplificador, não como mágica<a href=#a-ia-como-amplificador-n%c3%a3o-como-m%c3%a1gica aria-labelledby=a-ia-como-amplificador-não-como-mágica>
+<svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512" overflow="visible"><use href="#fas-link"/></svg>&nbsp;
+</a>
+</h2>
+<p>Não quero passar a impressão de que a IA é só ameaça, ou que o hype é todo vazio. O contraponto mais interessante do evento veio justamente de quem usou IA a favor da defesa. Um dos pesquisadores de web mais respeitados do mercado construiu um sistema de IA que encontrou centenas de sites vulneráveis a uma técnica de contrabando de requisições e ainda identificou uma classe genuinamente nova de problema. Mas o achado que ele fez questão de destacar não foi a autonomia da máquina. Foi o contrário: <strong>o especialista humano projetou o sistema, fez as perguntas certas, descartou as respostas fracas e restringiu o comportamento do agente com código determinístico.</strong> A IA foi um amplificador enorme de um profissional que sabia o que estava fazendo, não um substituto para ele.</p>
+<h2 id=nem-tudo-deveria-precisar-virar-um-controle-de-ia class=heading>Nem tudo deveria precisar virar um &ldquo;controle de IA&rdquo;<a href=#nem-tudo-deveria-precisar-virar-um-controle-de-ia aria-labelledby=nem-tudo-deveria-precisar-virar-um-controle-de-ia>
+<svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512" overflow="visible"><use href="#fas-link"/></svg>&nbsp;
+</a>
+</h2>
+<p>Volto, no fim, ao mesmo lugar de sempre. Assim como patch não deveria ser uma atividade iniciada pelo time de Segurança, segurança de agentes não deveria virar uma categoria mística que exige uma disciplina completamente nova. Boa parte do que protege um agente é o que já deveríamos saber fazer, aplicado a um tipo de ativo diferente.</p>
+<p>Se você tem um agente em produção, ele é um componente tecnológico como outro qualquer. Qual é o inventário de ferramentas, modelos e integrações que ele pode acionar? Ele opera com menor privilégio ou herda tudo que ninguém revisou? Existe um ponto de aprovação humana antes de uma ação irreversível? A entrada que chega até ele é tratada como não confiável, do mesmo jeito que tratamos qualquer input externo há vinte anos? Existe log auditável do que ele fez? Existe um jeito de desligar?</p>
+<p>Nenhuma dessas perguntas é sobre inteligência artificial. Todas são sobre <strong>prudência, inventário, menor privilégio e responsabilidade sobre aquilo que colocamos em produção</strong>, os mesmos princípios que sustentam qualquer operação madura. A DEFCON 34 mostrou que não precisamos de uma defesa nova e brilhante. Ela mostrou que o custo de deixar a defesa antiga frouxa acabou de subir.</p>
+<h2 id=mais-blá-blá-blá class=heading>Mais blá blá blá<a href=#mais-bl%c3%a1-bl%c3%a1-bl%c3%a1 aria-labelledby=mais-blá-blá-blá>
+<svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512" overflow="visible"><use href="#fas-link"/></svg>&nbsp;
+</a>
+</h2>
+<p>Então, como da última vez, prefiro terminar com perguntas em vez de respostas.</p>
+<p>Se você opera nuvem: seus papéis de execução seguem menor privilégio de verdade, ou um agente comprometido herdaria permissões que ninguém revisa há meses? Se você constrói com IA e MCP: você sabe exatamente quais ferramentas cada agente pode chamar, ou concedeu acesso amplo só &ldquo;para funcionar&rdquo;? Se você cuida de e-commerce: seu cadastro e seu checkout aguentam um exército de contas automatizado, ou foram desenhados apenas para o tráfego educado de sempre? Se você lidera Segurança: sua estratégia para agentes é um processo de fundamentos, ou uma linha de orçamento reservada para o próximo produto com &ldquo;AI&rdquo; no nome?</p>
+<p>E, principalmente: <strong>se amanhã você tirasse a palavra &ldquo;IA&rdquo; de todos esses ataques, sobraria algum problema que você já não deveria saber resolver?</strong></p>
+<p>Se a resposta for &ldquo;não&rdquo;, talvez a gente esteja com menos medo do futuro e mais devendo o presente. E o presente, como quase sempre, é feijão com arroz bem feito.</p>
+<p>👾</p>
+<h2 id=referências class=heading>Referências 📚<a href=#refer%c3%aancias aria-labelledby=referências>
+<svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512" overflow="visible"><use href="#fas-link"/></svg>&nbsp;
+</a>
+</h2>
+<p><strong>&ldquo;The Sandbox is a Suggestion: Deconstructing AI Agent Sandboxes&rdquo;</strong> - Elad Meged (Novee Security) Writeup do autor:
+<a href=https://novee.security/blog/breaking-ai-agent-sandboxes/>https://novee.security/blog/breaking-ai-agent-sandboxes/</a>
+Abstract oficial:
+<a href=https://defcon.org/html/defcon-34/dc-34-speakers.html>https://defcon.org/html/defcon-34/dc-34-speakers.html</a>
+</p>
+<p><strong>&ldquo;Your WAF Blocked Us, That Was The Exploit&rdquo; (Agentjacking)</strong> - Barak Sternberg, Nevo Poran e Ron Bobrov (Tenet Security) Writeup do autor:
+<a href=https://tenetsecurity.ai/blog/agentjacking-coding-agents-with-fake-sentry-errors/>https://tenetsecurity.ai/blog/agentjacking-coding-agents-with-fake-sentry-errors/</a>
+</p>
+<p><strong>Agentes de IA como motores de escalonamento de privilégio em nuvem</strong> - DEF CON 34 Cloud Village
+<a href=https://www.cloud-village.org/dc34>https://www.cloud-village.org/dc34</a>
+</p>
+<p><strong>&ldquo;Shopping Is The Attack: A Decade of E-Commerce Scalper Wars, and the Multi-Agent AI Era&rdquo;</strong> - Yaniv &ldquo;PSYMAG&rdquo; Menasherov Abstract oficial :
+<a href=https://defcon.org/html/defcon-34/dc-34-speakers.html>https://defcon.org/html/defcon-34/dc-34-speakers.html</a>
+</p>
+<p><strong>&ldquo;HTTP/1.1 Must Die: The Desync Endgame&rdquo;</strong> — James Kettle (PortSwigger) Whitepaper e pesquisa do autor:
+<a href=https://portswigger.net/research/http1-must-die>https://portswigger.net/research/http1-must-die</a>
+</p>
+<p><strong>Forkast - The Architecture of Failure: Why DEF CON 34 Shattered the AI Agent Security Narrative</strong>
+<a href=https://forkast.news/the-architecture-of-failure-why-def-con-34-shattered-the-ai-agent-security-narrative/>https://forkast.news/the-architecture-of-failure-why-def-con-34-shattered-the-ai-agent-security-narrative/</a>
+</p>
+<p><strong>As divulgações agênticas da DEF CON 34 lidas como um único argumento</strong>
+<a href=https://promptinjection.wtf/>https://promptinjection.wtf/</a>
+</p>
+<p><strong>OWASP Top 10 for LLM Applications (2025)</strong>
+<a href=https://owasp.org/www-project-top-10-for-large-language-model-applications/>https://owasp.org/www-project-top-10-for-large-language-model-applications/</a>
+</p>
+<p><strong>OWASP Top 10 for Agentic Applications (2026)</strong> - referenciado nas trilhas de Cloud/AI da DEF CON 34
+<a href=https://genai.owasp.org/>https://genai.owasp.org/</a>
+</p>
+<p><strong>OWASP Automated Threats to Web Applications</strong> - especialmente OAT-005 Scalping e OAT-008 Credential Stuffing
+<a href=https://owasp.org/www-project-automated-threats-to-web-applications/>https://owasp.org/www-project-automated-threats-to-web-applications/</a>
+</p>
+<p><strong>OWASP Credential Stuffing Prevention Cheat Sheet</strong>
+<a href=https://cheatsheetseries.owasp.org/cheatsheets/Credential_Stuffing_Prevention_Cheat_Sheet.html>https://cheatsheetseries.owasp.org/cheatsheets/Credential_Stuffing_Prevention_Cheat_Sheet.html</a>
+</p>
+<p><strong>MITRE ATLAS</strong> — Adversarial Threat Landscape for AI Systems
+<a href=https://atlas.mitre.org/>https://atlas.mitre.org/</a>
+</p>
+<p><strong>DEF CON 34 - Cloud Village</strong>
+<a href=https://www.cloud-village.org/dc34>https://www.cloud-village.org/dc34</a>
+</p>
+<p><strong>DEF CON 34 - AI Village</strong>
+<a href=https://aivillage.org/events/defcon-34/>https://aivillage.org/events/defcon-34/</a>
+</p>
+<p><strong>DEF CON 34 - Main Stage Talks</strong> (abstracts; vídeos e slides no media server)
+<a href=https://defcon.org/html/defcon-34/dc-34-speakers.html>https://defcon.org/html/defcon-34/dc-34-speakers.html</a>
+</p>
+<h3 id=outras-publicações-deste-blog class=heading>Outras publicações deste blog<a href=#outras-publica%c3%a7%c3%b5es-deste-blog aria-labelledby=outras-publicações-deste-blog>
+<svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512" overflow="visible"><use href="#fas-link"/></svg>&nbsp;
+</a>
+</h3>
+<p><strong>Patchphobia: O ano é 2026, e ainda …</strong>
+<a href=/blog/patchphobia-em-2026/>https://tiagotavares.io/blog/patchphobia-em-2026/</a>
+</p>
+<p><strong>Processo de Gestão de Vulnerabilidades e Automação para OffSec e AppSec utilizando Atlassian Jira</strong>
+<a href=/blog/vulnerability_management_jira_context_offsec_appsec/>https://tiagotavares.io/blog/vulnerability_management_jira_context_offsec_appsec/</a>
+</p>
+<div class="row row-cols-2 mt-5 mb-3">
+<div class=col><a class=page-nav-prev href=/blog/curso_de_linux/>
+<span class=visually-hidden>Previous page:&nbsp;</span>
+<svg class="svg-inline--fa fas fa-arrow-left" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512" overflow="visible"><use href="#fas-arrow-left"/></svg>&nbsp;Curso de Linux – Módulo 1 – Iniciante
+</a></div>
+<div class="col text-end"><a class=page-nav-next href=/blog/devguru1_vulnhub/>
+<span class=visually-hidden>Next page:&nbsp;</span>DevGuru: 1 - Vulnhub &nbsp;
+<svg class="svg-inline--fa fas fa-arrow-right" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512" overflow="visible"><use href="#fas-arrow-right"/></svg>
+</a></div>
+</div>
+<div id=disqus_thread></div>
+<script>window.disqus_config=function(){},function(){var d=document,s=d.createElement("script");s.async=!0,s.src="//tiagotavares-io.disqus.com/embed.js",console.log(s.src),s.setAttribute("data-timestamp",+new Date),(d.head||d.body).appendChild(s)}()</script>
+<noscript>Please enable JavaScript to view the <a href=https://disqus.com/?ref_noscript>comments powered by Disqus.</a></noscript>
+<a href=https://disqus.com class=dsq-brlink>comments powered by <span class=logo-disqus>Disqus</span></a>
+</div>
+<div class="col col-md-3 col-lg-2 d-none d-md-block">
+<div class="toc toc-sidebar mb-5 my-md-0 mb-lg-5 pb-3 text-body-secondary sticky-top">
+<h2 class="h6 fw-bold lh-base mt-0 mb-2" id=toc-heading>On this page</h2>
+<nav class=toc aria-labelledby=toc-heading>
+<a class="toc-item toc-level-1" href=/blog/defcon34-a-ia-industrializou-o-ataque-e-ainda-esquecemos-o-basico/#a-ia-não-inventou-vetor-novo-ela-industrializou-os-antigos>A IA não inventou vetor novo. Ela industrializou os antigos.</a>
+<a class="toc-item toc-level-1" href=/blog/defcon34-a-ia-industrializou-o-ataque-e-ainda-esquecemos-o-basico/#o-sandbox-é-uma-sugestão>O sandbox é uma sugestão</a>
+<a class="toc-item toc-level-1" href=/blog/defcon34-a-ia-industrializou-o-ataque-e-ainda-esquecemos-o-basico/#nenhuma-credencial-roubada>Nenhuma credencial roubada</a>
+<a class="toc-item toc-level-1" href=/blog/defcon34-a-ia-industrializou-o-ataque-e-ainda-esquecemos-o-basico/#às-vezes-a-porta-de-entrada-é-uma-credencial-que-você-esqueceu-exposta>Às vezes a porta de entrada é uma credencial que você esqueceu exposta</a>
+<a class="toc-item toc-level-1" href=/blog/defcon34-a-ia-industrializou-o-ataque-e-ainda-esquecemos-o-basico/#e-no-varejo-o-mesmo-roteiro-agora-com-agentes>E no varejo? O mesmo roteiro, agora com agentes</a>
+<a class="toc-item toc-level-1" href=/blog/defcon34-a-ia-industrializou-o-ataque-e-ainda-esquecemos-o-basico/#a-ia-como-amplificador-não-como-mágica>A IA como amplificador, não como mágica</a>
+<a class="toc-item toc-level-1" href=/blog/defcon34-a-ia-industrializou-o-ataque-e-ainda-esquecemos-o-basico/#nem-tudo-deveria-precisar-virar-um-controle-de-ia>Nem tudo deveria precisar virar um &ldquo;controle de IA&rdquo;</a>
+<a class="toc-item toc-level-1" href=/blog/defcon34-a-ia-industrializou-o-ataque-e-ainda-esquecemos-o-basico/#mais-blá-blá-blá>Mais blá blá blá</a>
+<a class="toc-item toc-level-1" href=/blog/defcon34-a-ia-industrializou-o-ataque-e-ainda-esquecemos-o-basico/#referências>Referências 📚</a>
+<a href=#toc-collapse-items id=btnTOCShowMore class="btn btn-link link-primary position-relative toc-item" data-bs-toggle=collapse aria-expanded=false aria-controls=toc-collapse-items role=button>
+<span class="d-flex justify-content-start">
+<span class=my-auto>Show 1 more</span>
+</span></a>
+<div class=collapse id=toc-collapse-items>
+<a class="toc-item toc-level-2" href=/blog/defcon34-a-ia-industrializou-o-ataque-e-ainda-esquecemos-o-basico/#outras-publicações-deste-blog>Outras publicações deste blog</a>
+&nbsp;
+<a href=#toc-collapse-items id=btnTOCShowLess class="btn btn-link link-primary position-relative toc-item" data-bs-toggle=collapse aria-expanded=false aria-controls=toc-collapse-items role=button>
+<span class="d-flex justify-content-start">
+<span class=my-auto>Show less</span>
+</span></a>
+</div>
+</nav>
+</div>
+</div>
+</div>
+</div>
+</main><div class="container-fluid bg-primary bg-opacity-10">
+<div class="container-xxl px-4 px-xxl-0">
+<div class="row row-cols-2 py-3 align-items-center">
+<div class="col col-6">
+<div class="row justify-content-end p-0">
+<div class="col-12 col-md-8 p-0">
+<div class="fs-3 fw-bold">👾</div>
+<p>Eternal student.</p>
+</div>
+</div>
+</div>
+<div class="col col-6 text-sm-start">
+<a href=https://linkedin.com/in/tiagotavi aria-label=LinkedIn class="text-decoration-none link-secondary d-inline p-2">
+<svg class="svg-inline--fa fab fa-linkedin fa-2x" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 448 512" overflow="visible"><use href="#fab-linkedin"/></svg>&nbsp;
+</a>
+<a href=https://github.com/tiagotavi aria-label=GitHub class="text-decoration-none link-secondary d-inline p-2">
+<svg class="svg-inline--fa fab fa-github fa-2x" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512" overflow="visible"><use href="#fab-github"/></svg>&nbsp;
+</a>
+<a href=https://x.com/tiagotavi aria-label=X class="text-decoration-none link-secondary d-inline p-2">
+<svg class="svg-inline--fa fab fa-x-twitter fa-2x" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 448 512" overflow="visible"><use href="#fab-x-twitter"/></svg>&nbsp;
+</a>
+</div>
+</div>
+</div>
+</div>
+<footer class="container-fluid footer text-center p-3">
+<div class="container-xxl text-center">
+<small>
+Copyright © 2026 Tiago Tavares.
+</small>
+</div>
+</footer>
+<div id=toast-container class="toast-container position-fixed bottom-0 end-0 p-3">
+<div id=toast-copied-code-message class=toast role=alert aria-live=assertive aria-atomic=true>
+<div class=toast-header>
+<strong class=me-auto>debugging the life</strong>
+<button type=button class=btn-close data-bs-dismiss=toast aria-label=Close></button>
+</div>
+<div class=toast-body>Code copied to clipboard</div>
+</div>
+</div>
+<dialog class=lightbox aria-label="Enlarged view">
+<button type=button class=lightbox-close aria-label=Close>
+<svg class="svg-inline--fa fas fa-xmark fa-fw fa-xl" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 384 512" overflow="visible"><use href="#fas-xmark"/></svg></button>
+<div class=lightbox-content></div>
+</dialog>
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" display="none"><symbol id="fab-facebook" overflow="visible" viewBox="0 0 512 512"><path fill="currentColor" d="M512 256C512 114.6 397.4.0 256 0S0 114.6.0 256C0 376 82.7 476.8 194.2 504.5V334.2h-52.8V256h52.8v-33.7c0-87.1 39.4-127.5 125-127.5 16.2.0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H287v175.9C413.8 494.8 512 386.9 512 256z"/></symbol><symbol id="fab-github" overflow="visible" viewBox="0 0 512 512"><path fill="currentColor" d="M216.5 362.5c-66-8-112.5-55.5-112.5-117 0-25 9-52 24-70-6.5-16.5-5.5-51.5 2-66 20-2.5 47 8 63 22.5 19-6 39-9 63.5-9s44.5 3 62.5 8.5c15.5-14 43-24.5 63-22 7 13.5 8 48.5 1.5 65.5 16 19 24.5 44.5 24.5 70.5.0 61.5-46.5 108-113.5 116.5 17 11 28.5 35 28.5 62.5v52c0 15 12.5 23.5 27.5 17.5C441 459.5 512 369 512 257 512 115.5 397 0 255.5.0S0 115.5.0 257c0 111 70.5 203 165.5 237.5 13.5 5 26.5-4 26.5-17.5v-40c-7 3-16 5-24 5-33 0-52.5-18-66.5-51.5-5.5-13.5-11.5-21.5-23-23-6-.5-8-3-8-6 0-6 10-10.5 20-10.5 14.5.0 27 9 40 27.5 10 14.5 20.5 21 33 21s20.5-4.5 32-16c8.5-8.5 15-16 21-21z"/></symbol><symbol id="fab-linkedin" overflow="visible" viewBox="0 0 448 512"><path fill="currentColor" d="M416 32H31.9C14.3 32 0 46.5.0 64.3V447.7C0 465.5 14.3 480 31.9 480H416c17.6.0 32-14.5 32-32.3V64.3C448 46.5 433.6 32 416 32zM135.4 416H69V202.2h66.5V416h-.1zM102.2 96a38.5 38.5.0 110 77 38.5 38.5.0 110-77zM384.3 416h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6.0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2.0 79.7 44.3 79.7 101.9V416z"/></symbol><symbol id="fab-whatsapp" overflow="visible" viewBox="0 0 448 512"><path fill="currentColor" d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4.0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3.0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2.0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2.0-101.7 82.8-184.5 184.6-184.5 49.3.0 95.6 19.2 130.4 54.1s56.2 81.2 56.1 130.5c0 101.8-84.9 184.6-186.6 184.6zM325.1 300.5c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8s-14.3 18-17.6 21.8c-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7s-12.5-30.1-17.1-41.2c-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2s-9.7 1.4-14.8 6.9c-5.1 5.6-19.4 19-19.4 46.3s19.9 53.7 22.6 57.4c2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4s4.6-24.1 3.2-26.4c-1.3-2.5-5-3.9-10.5-6.6z"/></symbol><symbol id="fab-x-twitter" overflow="visible" viewBox="0 0 448 512"><path fill="currentColor" d="M357.2 48h70.6L273.6 224.2 455 464H313L201.7 318.6 74.5 464H3.8L168.7 275.5-5.2 48H140.4L240.9 180.9 357.2 48zM332.4 421.8h39.1L119.1 88h-42l255.3 333.8z"/></symbol><symbol id="fas-angle-left" overflow="visible" viewBox="0 0 256 512"><path fill="currentColor" d="M9.4 233.4c-12.5 12.5-12.5 32.8.0 45.3l160 160c12.5 12.5 32.8 12.5 45.3.0s12.5-32.8.0-45.3L77.3 256 214.6 118.6c12.5-12.5 12.5-32.8.0-45.3s-32.8-12.5-45.3.0l-160 160z"/></symbol><symbol id="fas-arrow-left" overflow="visible" viewBox="0 0 512 512"><path fill="currentColor" d="M9.4 233.4c-12.5 12.5-12.5 32.8.0 45.3l160 160c12.5 12.5 32.8 12.5 45.3.0s12.5-32.8.0-45.3L109.3 288H480c17.7.0 32-14.3 32-32s-14.3-32-32-32H109.3l105.4-105.4c12.5-12.5 12.5-32.8.0-45.3s-32.8-12.5-45.3.0l-160 160z"/></symbol><symbol id="fas-arrow-right" overflow="visible" viewBox="0 0 512 512"><path fill="currentColor" d="M502.6 278.6c12.5-12.5 12.5-32.8.0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3.0s-12.5 32.8.0 45.3L402.7 224H32c-17.7.0-32 14.3-32 32s14.3 32 32 32h370.7L297.3 393.4c-12.5 12.5-12.5 32.8.0 45.3s32.8 12.5 45.3.0l160-160z"/></symbol><symbol id="fas-ellipsis" overflow="visible" viewBox="0 0 448 512"><path fill="currentColor" d="M0 256a56 56 0 11112 0A56 56 0 110 256zm168 0a56 56 0 11112 0 56 56 0 11-112 0zm224-56a56 56 0 110 112 56 56 0 110-112z"/></symbol><symbol id="fas-link" overflow="visible" viewBox="0 0 576 512"><path fill="currentColor" d="M419.5 96c-16.6.0-32.7 4.5-46.8 12.7-15.8-16-34.2-29.4-54.5-39.5 28.2-24 64.1-37.2 101.3-37.2C505.9 32 576 102 576 188.5c0 41.5-16.5 81.3-45.8 110.6l-71.1 71.1C429.8 399.5 390 416 348.5 416 262.1 416 192 346 192 259.5c0-1.5.0-3 .1-4.5.5-17.7 15.2-31.6 32.9-31.1s31.6 15.2 31.1 32.9c0 .9.0 1.8.0 2.6.0 51.1 41.4 92.5 92.5 92.5 24.5.0 48-9.7 65.4-27.1l71.1-71.1c17.3-17.3 27.1-40.9 27.1-65.4.0-51.1-41.4-92.5-92.5-92.5zM275.2 173.3c-1.9-.8-3.8-1.9-5.5-3.1-12.6-6.5-27-10.2-42.1-10.2-24.5.0-48 9.7-65.4 27.1L91.1 258.2C73.8 275.5 64 299.1 64 323.6c0 51.1 41.4 92.5 92.5 92.5 16.5.0 32.6-4.4 46.7-12.6 15.8 16 34.2 29.4 54.6 39.5-28.2 23.9-64 37.2-101.3 37.2C70.1 480.2.0 410.2.0 323.7c0-41.5 16.5-81.3 45.8-110.6l71.1-71.1c29.3-29.3 69.1-45.8 110.6-45.8 86.6.0 156.5 70.6 156.5 156.9.0 1.3.0 2.6.0 3.9-.4 17.7-15.1 31.6-32.8 31.2s-31.6-15.1-31.2-32.8c0-.8.0-1.5.0-2.3.0-33.7-18-63.3-44.8-79.6z"/></symbol><symbol id="fas-moon" overflow="visible" viewBox="0 0 512 512"><path fill="currentColor" d="M256 0C114.6.0.0 114.6.0 256S114.6 512 256 512c68.8.0 131.3-27.2 177.3-71.4 7.3-7 9.4-17.9 5.3-27.1s-13.7-14.9-23.8-14.1c-4.9.4-9.8.6-14.8.6-101.6.0-184-82.4-184-184 0-72.1 41.5-134.6 102.1-164.8 9.1-4.5 14.3-14.3 13.1-24.4S322.6 8.5 312.7 6.3C294.4 2.2 275.4.0 256 0z"/></symbol><symbol id="fas-share-nodes" overflow="visible" viewBox="0 0 512 512"><path fill="currentColor" d="M384 192c53 0 96-43 96-96S437 0 384 0s-96 43-96 96c0 5.4.5 10.8 1.3 16L159.6 184.1c-16.9-15-39.2-24.1-63.6-24.1-53 0-96 43-96 96s43 96 96 96c24.4.0 46.6-9.1 63.6-24.1L289.3 4e2c-.9 5.2-1.3 10.5-1.3 16 0 53 43 96 96 96s96-43 96-96-43-96-96-96c-24.4.0-46.6 9.1-63.6 24.1L190.7 272c.9-5.2 1.3-10.5 1.3-16s-.5-10.8-1.3-16l129.7-72.1c16.9 15 39.2 24.1 63.6 24.1z"/></symbol><symbol id="fas-sort" overflow="visible" viewBox="0 0 384 512"><path fill="currentColor" d="M2.4 204.2C7.4 216.2 19 224 32 224h320c12.9.0 24.6-7.8 29.6-19.8s2.2-25.7-6.9-34.9l-160-160c-12.5-12.5-32.8-12.5-45.3.0l-160 160c-9.2 9.2-11.9 22.9-6.9 34.9zm0 103.5c-5 12-2.2 25.7 6.9 34.9l160 160c12.5 12.5 32.8 12.5 45.3.0l160-160c9.2-9.2 11.9-22.9 6.9-34.9S364.9 288 352 288H32c-12.9.0-24.6 7.8-29.6 19.8z"/></symbol><symbol id="fas-sun" overflow="visible" viewBox="0 0 576 512"><path fill="currentColor" d="M288-32c8.4.0 16.3 4.4 20.6 11.7l55.5 92.6L468.9 46c8.2-2 16.9.4 22.8 6.3S5e2 67 498 75.1l-26.3 104.7 92.7 55.5c7.2 4.3 11.7 12.2 11.7 20.6s-4.4 16.3-11.7 20.6l-92.7 55.6L498 436.8c2 8.2-.4 16.9-6.3 22.8S477 468 468.9 466l-104.7-26.3-55.5 92.7c-4.3 7.2-12.2 11.7-20.6 11.7s-16.3-4.4-20.6-11.7L211.9 439.7 107.2 466c-8.2 2-16.8-.4-22.8-6.3S76 445 78 436.8l26.2-104.7-92.6-55.5C4.4 272.2.0 264.4.0 256s4.4-16.3 11.7-20.6l92.6-55.5L78 75.1c-2-8.2.3-16.8 6.3-22.8S99 44 107.2 46l104.7 26.2 55.5-92.6 1.8-2.6c4.5-5.7 11.4-9.1 18.8-9.1zm0 144a144 144 0 100 288 144 144 0 100-288zm0 240a96 96 0 110-192 96 96 0 110 192z"/></symbol><symbol id="fas-xmark" overflow="visible" viewBox="0 0 384 512"><path fill="currentColor" d="M55.1 73.4c-12.5-12.5-32.8-12.5-45.3.0s-12.5 32.8.0 45.3L147.2 256 9.9 393.4c-12.5 12.5-12.5 32.8.0 45.3s32.8 12.5 45.3.0L192.5 301.3 329.9 438.6c12.5 12.5 32.8 12.5 45.3.0s12.5-32.8.0-45.3L237.8 256 375.1 118.6c12.5-12.5 12.5-32.8.0-45.3s-32.8-12.5-45.3.0L192.5 210.7 55.1 73.4z"/></symbol></svg>
+<script src=/js/core.bundle-analytics.en.1e918db28e82b276cfc90b4b8e21f3c5d32a7ea2384e6d01d8cb09821f736cea.js data-category=analytics integrity="sha256-HpGNso6CsnbPyQtLjiHzxdMqfqI4Tm0B2MsJgh9zbOo=" crossorigin=anonymous defer></script>
+<script src=/js/core.bundle.en.ca9eeaba92874a33b3af9a4677458238ce67c4ff24499e518a1f8e878d870a25.js integrity="sha256-yp7qupKHSjOzr5pGd0WCOM5nxP8kSZ5Rih+Oh42HCiU=" crossorigin=anonymous defer></script>
+<script src=/js/core.bundle.en.0d1c7da2f981dd0ce32e008ebfbf8a1f8c9ff66189e19ed54f46589c18bb4c2f.mjs type=module integrity="sha256-DRx9ovmB3QzjLgCOv7+KH4yf9mGJ4Z7VT0ZYnBi7TC8=" crossorigin=anonymous defer></script></body>
+</html>
